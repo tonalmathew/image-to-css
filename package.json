@@ -1,0 +1,16 @@
+{
+  "name": "image-to-css",
+  "version": "1.0.0",
+  "description": "Convert image to css box-shadow property.",
+  "main": "cli.js",
+  "bin": {
+    "image-to-css": "./cli.js"
+  },
+  "author": "tonalmathew",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "fs-extra": "^11.1.1",
+    "jimp": "^0.22.8"
+  }
+}
