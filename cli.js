@@ -6,41 +6,48 @@ const Jimp = require('jimp');
 const path = require('path');
 
 commander
-  .usage('<imagePath> -O <outputPath>')
-  .option('-O, --output <outputPath>', 'Output folder for the CSS file')
+  .usage('-f <imagePath> -o <outputPath>')
+  .option('-f, --file <inputFile>', 'Input image file path')
+  .option('-o, --output <outputPath>', 'Output folder for the CSS file')
+  .option('-h, --help', 'Display usage information')
   .parse(process.argv);
 
-  const options = commander.opts();
+const options = commander.opts();
+
+if (options.help) {
+  commander.outputHelp();
+  process.exit(0);
+}
+
+if(!options.file) {
+  console.error('Error: Input image file does not exist. Please provide an input image file.')
+  process.exit(1);
+}
 
 if (!options.output) {
   console.error('Output folder not specified. Please provide the -O flag with the output folder path.');
   process.exit(1);
 }
 
-const inputImagePath = commander.args[0];
+const inputImagePath = options.file;
 const outputFolderPath = options.output;
 
 async function imageToCss(imagePath, outputPath) {
   try {
-    if (!fs.existsSync(imagePath)) {
-      console.error('Error: Input image file does not exist. Please provide an input image file.');
-      process.exit(1);
-    }
-
     await fs.ensureDir(outputPath);
     const image = await Jimp.read(imagePath);
 
-    let rgbaVal = []
-    const boxShadowArr = []
-    const {bitmap: {height, width}} = image
+    const boxShadowArr = [];
+    const { bitmap: { width, data } } = image;
 
-    for(let y=0; y<height; y++) {
-      for(let x=0; x<width; x++) {
-        rgbaVal = Jimp.intToRGBA(image.getPixelColor(x,y));
-        boxShadowArr.push([
-          `${x}px ${y}px 0px 1px rgba(${rgbaVal.r},${rgbaVal.g},${rgbaVal.b})`,
-        ])
-      }
+    for (let i = 0; i < data.length; i += 4) {
+      const x = (i / 4) % width;
+      const y = Math.floor(i / (width * 4));
+      const r = data[i];
+      const g = data[i + 1];
+      const b = data[i + 2];
+
+      boxShadowArr.push([`${x}px ${y}px 0px 1px rgba(${r},${g},${b})`]);
     }
 
     const htmlContent = `
