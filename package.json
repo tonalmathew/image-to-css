@@ -6,6 +6,10 @@
   "bin": {
     "image-to-css": "./cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tonalmathew/image-to-css"
+  },
   "author": "tonalmathew",
   "license": "MIT",
   "dependencies": {
