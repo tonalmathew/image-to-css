@@ -1,6 +1,6 @@
 {
   "name": "@tonalmathew/image-to-css",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "private": false,
   "description": "Convert image to css box-shadow property.",
   "main": "cli.js",
@@ -20,6 +20,17 @@
   },
   "author": "tonalmathew",
   "license": "MIT",
+  "keywords": [
+		"cli",
+		"image",
+		"file",
+		"to",
+		"css",
+		"box",
+		"shadow",
+		"jimp",
+		"commander"
+	],
   "dependencies": {
     "commander": "^11.0.0",
     "fs-extra": "^11.1.1",
