@@ -1,6 +1,6 @@
 {
-  "name": "@tonalmathew/image-to-css",
-  "version": "1.0.7",
+  "name": "@tonal-mathew/image-to-css",
+  "version": "1.0.9",
   "private": false,
   "description": "Convert image to css box-shadow property.",
   "main": "cli.js",
