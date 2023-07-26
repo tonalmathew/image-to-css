@@ -1,7 +1,9 @@
 <div align='center'>
-<img src='./logo.png' alt='logo' />
+<a href="#"><img src='./logo.png' alt='logo' /></a>
 <p><b>Convert image to CSS box-shadow</b>
 </div>
+
+---
 
 You can use this package to convert an image to css box-shadow property.
 
