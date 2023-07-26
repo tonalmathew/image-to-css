@@ -25,7 +25,7 @@ if(!options.file) {
 }
 
 if (!options.output) {
-  console.error('Output folder not specified. Please provide the -O flag with the output folder path.');
+  console.error('Output folder not specified. Please provide the -o flag with the output folder path.');
   process.exit(1);
 }
 
