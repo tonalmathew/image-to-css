@@ -1,4 +1,9 @@
-# image-to-css
+<div align='center'>
+<a href="#"><img src='./logo.svg' alt='logo' /></a>
+<p><b>:wrench: Convert image to CSS box-shadow :wrench:</b>
+</div>
+
+---
 
 You can use this package to convert an image to css box-shadow property.
 
