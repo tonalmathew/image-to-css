@@ -10,7 +10,7 @@ You can use this package to convert an image to css box-shadow property.
 
 - `-h` or `--help` for help.
 - `-f` or `--file` for entering input file.
-- `o` or `--output` for the output destination folder name.
+- `-o` or `--output` for the output destination folder name.
 
 ### How to use
 
