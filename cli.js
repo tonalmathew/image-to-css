@@ -24,13 +24,8 @@ if(!options.file) {
   process.exit(1);
 }
 
-if (!options.output) {
-  console.error('Output folder not specified. Please provide the -o flag with the output folder path.');
-  process.exit(1);
-}
-
 const inputImagePath = options.file;
-const outputFolderPath = options.output;
+const outputFolderPath = options.output ? options.output : 'output';
 
 async function imageToCss(imagePath, outputPath) {
   try {
