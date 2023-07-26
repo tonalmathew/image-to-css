@@ -1,6 +1,6 @@
 {
   "name": "@tonalmathew/image-to-css",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": false,
   "description": "Convert image to css box-shadow property.",
   "main": "cli.js",
@@ -13,6 +13,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tonalmathew/image-to-css.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "author": "tonalmathew",
   "license": "MIT",
