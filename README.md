@@ -1,5 +1,5 @@
 <div align='center'>
-<a href="#"><img src='./logo.svg' alt='logo' /></a>
+<a href="#"><img src='https://raw.githubusercontent.com/tonalmathew/image-to-css/781c2a9ae1921859f26f2c78f34c84ab897acdd4/logo.svg' alt='logo' /></a>
 <p><b>:wrench: Convert image to CSS box-shadow :wrench:</b>
 </div>
 
