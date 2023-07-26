@@ -1,6 +1,6 @@
 <div align='center'>
 <a href="#"><img src='./logo.png' alt='logo' /></a>
-<p><b>Convert image to CSS box-shadow</b>
+<p><b>Convert image to CSS box-shadow :wrench:</b>
 </div>
 
 ---
